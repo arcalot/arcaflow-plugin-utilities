@@ -294,7 +294,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "7f81efe8ee1811517cde636b0801131313e22138b1759fd60dedcc86f53ca5db"
+content-hash = "0241e840596b790bc236929cf33676ac3e58d80abb4dc2eac6a8028ad9030da8"
 
 [metadata.files]
 arcaflow-plugin-sdk = []
