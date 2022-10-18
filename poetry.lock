@@ -1,6 +1,6 @@
 [[package]]
 name = "arcaflow-plugin-sdk"
-version = "0.8.0"
+version = "0.9.0"
 description = "Plugin SDK for the Arcaflow workflow engine"
 category = "main"
 optional = false
