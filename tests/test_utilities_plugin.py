@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import unittest
-import utilities_plugin
+from arcaflow_plugin_utilities import utilities_plugin
 from arcaflow_plugin_sdk import plugin
 
 
