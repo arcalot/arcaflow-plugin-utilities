@@ -8,7 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-arcaflow-plugin-sdk = "0.9.0"
+arcaflow-plugin-sdk = { git = "https://github.com/arcalot/arcaflow-plugin-sdk-python.git", branch = "atp-comms-fix" }
 
 [tool.poetry.dev-dependencies]
 docformatter = "^1.5.0"
