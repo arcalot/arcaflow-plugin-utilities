@@ -28,7 +28,7 @@ RUN python3 -m coverage html -d /htmlcov --omit=/usr/local/*
 # final image
 FROM quay.io/centos/centos:stream8
 ARG package
-RUN dnf -y module install python39 && dnf -y install python39 python39-pip git
+RUN dnf -y module install python39 && dnf -y install python39 python39-pip
 
 WORKDIR /app
 
