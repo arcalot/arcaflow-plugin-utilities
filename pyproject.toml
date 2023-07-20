@@ -6,6 +6,10 @@ authors = ["Harshith-umesh <harshith.umesh.nat@gmail.com>"]
 license = "Apache-2.0+GPL-2.0-only"
 readme = "README.md"
 
+packages = [
+   { include="utilities_plugin.py", from="./arcaflow_plugin_utilities"  },
+]
+
 [tool.poetry.dependencies]
 python = "^3.9"
 arcaflow-plugin-sdk = "0.10.1"
