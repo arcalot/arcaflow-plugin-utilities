@@ -57,7 +57,6 @@ class ErrorOutput:
 def generate_uuid(
     params: InputParams,
 ) -> typing.Tuple[str, typing.Union[SuccessOutputUUID, ErrorOutput]]:
-
     try:
         cmd = ["uuidgen"]
         uuid = subprocess.check_output(cmd, stderr=subprocess.STDOUT)

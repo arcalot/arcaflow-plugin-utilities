@@ -16,9 +16,10 @@ class HelloWorldTest(unittest.TestCase):
         )
 
     def test_functional(self):
-
         input = utilities_plugin.InputParams()
-        output_id, output_data = utilities_plugin.generate_uuid(input)
+        output_id, output_data = utilities_plugin.generate_uuid(
+            params=input, run_id="plugin_ci"
+        )
 
         # The example plugin always returns an error:
         self.assertEqual("success", output_id)
