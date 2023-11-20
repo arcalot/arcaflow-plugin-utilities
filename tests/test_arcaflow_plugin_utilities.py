@@ -12,7 +12,11 @@ class HelloWorldTest(unittest.TestCase):
         )
 
         plugin.test_object_serialization(
-            utilities_plugin.ErrorOutput(exit_code=1, error="This is an error")
+            utilities_plugin.SuccessOutputTimestamp("2023-11-20T18:34:59.784498Z")
+        )
+
+        plugin.test_object_serialization(
+            utilities_plugin.ErrorOutput(error="This is an error")
         )
 
     def test_functional(self):
@@ -21,9 +25,15 @@ class HelloWorldTest(unittest.TestCase):
             params=input, run_id="plugin_ci"
         )
 
-        # The example plugin always returns an error:
         self.assertEqual("success", output_id)
         self.assertIsNotNone(output_data.uuid)
+
+        output_id, output_data = utilities_plugin.generate_timestamp(
+            params=input, run_id="plugin_ci"
+        )
+
+        self.assertEqual("success", output_id)
+        self.assertIsNotNone(output_data.timestamp)
 
 
 if __name__ == "__main__":
