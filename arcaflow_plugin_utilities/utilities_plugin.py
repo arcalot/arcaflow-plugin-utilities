@@ -59,7 +59,7 @@ def generate_uuid(
     id="timestamp",
     name="Generate timestamp",
     description=(
-        "Generates a random timestamp in ISO 8601 format with millisecond accuracy",
+        "Generates a random timestamp in ISO 8601 format with millisecond accuracy"
     ),
     outputs={"success": SuccessOutputTimestamp, "error": ErrorOutput},
 )
