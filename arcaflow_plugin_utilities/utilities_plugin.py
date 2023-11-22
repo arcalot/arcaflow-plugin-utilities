@@ -2,7 +2,7 @@
 
 import sys
 import uuid
-import datetime
+from datetime import datetime, timezone
 import typing
 from dataclasses import dataclass
 from arcaflow_plugin_sdk import plugin, schema
@@ -66,7 +66,7 @@ def generate_uuid(
 def generate_timestamp(
     params: InputParams,
 ) -> typing.Tuple[str, typing.Union[SuccessOutputTimestamp, ErrorOutput]]:
-    timestamp = datetime.datetime.now().isoformat()
+    timestamp = datetime.now(timezone.utc).astimezone().isoformat()
     return "success", SuccessOutputTimestamp(str(timestamp))
 
 
