@@ -16,6 +16,10 @@ class HelloWorldTest(unittest.TestCase):
         )
 
         plugin.test_object_serialization(
+            utilities_plugin.SuccessOutputWait("Finished waiting 1500 milliseconds")
+        )
+
+        plugin.test_object_serialization(
             utilities_plugin.ErrorOutput(error="This is an error")
         )
 
@@ -34,6 +38,13 @@ class HelloWorldTest(unittest.TestCase):
 
         self.assertEqual("success", output_id)
         self.assertIsNotNone(output_data.timestamp)
+
+        output_id, output_data = utilities_plugin.wait(
+            params = utilities_plugin.WaitInput(wait_time_ms=500), run_id="plugin_ci"
+        )
+
+        self.assertEqual("success", output_id)
+        self.assertIsNotNone(output_data.waited)
 
 
 if __name__ == "__main__":
