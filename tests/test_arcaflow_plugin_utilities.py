@@ -40,7 +40,7 @@ class HelloWorldTest(unittest.TestCase):
         self.assertIsNotNone(output_data.timestamp)
 
         output_id, output_data = utilities_plugin.wait(
-            params = utilities_plugin.WaitInput(wait_time_ms=500), run_id="plugin_ci"
+            params=utilities_plugin.WaitInput(wait_time_ms=500), run_id="plugin_ci"
         )
 
         self.assertEqual("success", output_id)
