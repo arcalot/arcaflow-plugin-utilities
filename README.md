@@ -176,12 +176,14 @@ Wait for specified milliseconds
 
 <table><tbody>
 <tr><th>Type:</th><td><code>scope</code></td><tr><th>Root object:</th><td>SuccessOutputWait</td></tr>
-<tr><th>Properties</th><td><details><summary>waited (<code>string</code>)</summary>
-                <table><tbody><tr><th>Name:</th><td>waited</td></tr><tr><th>Description:</th><td width="500">Confirmation of milliseconds waited</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
+<tr><th>Properties</th><td><details><summary>waited_ms (<code>float</code>)</summary>
+                <table><tbody><tr><th>Name:</th><td>waited</td></tr><tr><th>Description:</th><td width="500">Confirmation of milliseconds waited</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>float</code></td>
+</tbody></table>
             </details></td></tr>
 <tr><td colspan="2"><details><summary><strong>Objects</strong></summary><details><summary>SuccessOutputWait (<code>object</code>)</summary>
-            <table><tbody><tr><th>Type:</th><td><code>object</code></td><tr><th>Properties</th><td><details><summary>waited (<code>string</code>)</summary>
-        <table><tbody><tr><th>Name:</th><td>waited</td></tr><tr><th>Description:</th><td width="500">Confirmation of milliseconds waited</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
+            <table><tbody><tr><th>Type:</th><td><code>object</code></td><tr><th>Properties</th><td><details><summary>waited_ms (<code>float</code>)</summary>
+        <table><tbody><tr><th>Name:</th><td>waited</td></tr><tr><th>Description:</th><td width="500">Confirmation of milliseconds waited</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>float</code></td>
+</tbody></table>
         </details></td></tr>
 </tbody></table>
         </details></details></td></tr>
