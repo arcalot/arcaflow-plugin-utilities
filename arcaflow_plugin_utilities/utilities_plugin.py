@@ -3,16 +3,15 @@
 import sys
 import uuid
 from datetime import datetime, timezone
-import time
+from time import time,sleep
 import typing
 from dataclasses import dataclass
 from arcaflow_plugin_sdk import plugin, schema
 
 
-# For steps that do not require input
 @dataclass
 class InputParams:
-    {}
+    """For steps that do not require input"""
 
 
 @dataclass
@@ -44,8 +43,8 @@ class SuccessOutputTimestamp:
 
 @dataclass
 class SuccessOutputWait:
-    waited: typing.Annotated[
-        str,
+    waited_ms: typing.Annotated[
+        float,
         schema.name("waited"),
         schema.description("Confirmation of milliseconds waited"),
     ]
@@ -97,10 +96,10 @@ def generate_timestamp(
 def wait(
     params: WaitInput,
 ) -> typing.Tuple[str, typing.Union[SuccessOutputWait, ErrorOutput]]:
-    time.sleep(params.wait_time_ms / 1000)
-    return "success", SuccessOutputWait(
-        f"Finished waiting {params.wait_time_ms} milliseconds"
-    )
+    start = time()
+    sleep(params.wait_time_ms / 1000)
+    end = time()
+    return "success", SuccessOutputWait((end - start) * 1000)
 
 
 if __name__ == "__main__":
