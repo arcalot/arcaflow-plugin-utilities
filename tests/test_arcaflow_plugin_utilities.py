@@ -15,9 +15,7 @@ class HelloWorldTest(unittest.TestCase):
             utilities_plugin.SuccessOutputTimestamp("2023-11-20T18:34:59.784498Z")
         )
 
-        plugin.test_object_serialization(
-            utilities_plugin.SuccessOutputWait(1.234)
-        )
+        plugin.test_object_serialization(utilities_plugin.SuccessOutputWait(1.234))
 
         plugin.test_object_serialization(
             utilities_plugin.ErrorOutput(error="This is an error")
@@ -38,11 +36,12 @@ class HelloWorldTest(unittest.TestCase):
 
         self.assertEqual("success", output_id)
         self.assertIsNotNone(output_data.timestamp)
-        
+
         test_time = 500
 
         output_id, output_data = utilities_plugin.wait(
-            params=utilities_plugin.WaitInput(wait_time_ms=test_time), run_id="plugin_ci"
+            params=utilities_plugin.WaitInput(wait_time_ms=test_time),
+            run_id="plugin_ci",
         )
 
         self.assertEqual("success", output_id)

@@ -3,7 +3,7 @@
 import sys
 import uuid
 from datetime import datetime, timezone
-from time import time,sleep
+from time import time, sleep
 import typing
 from dataclasses import dataclass
 from arcaflow_plugin_sdk import plugin, schema
