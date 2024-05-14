@@ -3,6 +3,7 @@
 import sys
 import uuid
 from datetime import datetime, timezone
+from time import time, sleep
 import typing
 from dataclasses import dataclass
 from arcaflow_plugin_sdk import plugin, schema
@@ -10,9 +11,16 @@ from arcaflow_plugin_sdk import plugin, schema
 
 @dataclass
 class InputParams:
-    """
-    This is the data structure for the input parameters of the uuid plugin.
-    """
+    """For steps that do not require input"""
+
+
+@dataclass
+class WaitInput:
+    wait_time_ms: typing.Annotated[
+        int,
+        schema.name("Wait time"),
+        schema.description("How long to wait in milliseconds"),
+    ]
 
 
 @dataclass
@@ -30,6 +38,15 @@ class SuccessOutputTimestamp:
         str,
         schema.name("timestamp"),
         schema.description("An ISO 8601 timestamp with millisecond precision"),
+    ]
+
+
+@dataclass
+class SuccessOutputWait:
+    waited_ms: typing.Annotated[
+        float,
+        schema.name("waited"),
+        schema.description("Confirmation of milliseconds waited"),
     ]
 
 
@@ -70,12 +87,28 @@ def generate_timestamp(
     return "success", SuccessOutputTimestamp(str(timestamp))
 
 
+@plugin.step(
+    id="wait",
+    name="Wait",
+    description=("Wait for specified milliseconds"),
+    outputs={"success": SuccessOutputWait, "error": ErrorOutput},
+)
+def wait(
+    params: WaitInput,
+) -> typing.Tuple[str, typing.Union[SuccessOutputWait, ErrorOutput]]:
+    start = time()
+    sleep(params.wait_time_ms / 1000)
+    end = time()
+    return "success", SuccessOutputWait((end - start) * 1000)
+
+
 if __name__ == "__main__":
     sys.exit(
         plugin.run(
             plugin.build_schema(
                 generate_uuid,
                 generate_timestamp,
+                wait,
             )
         )
     )

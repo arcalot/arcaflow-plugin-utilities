@@ -56,11 +56,11 @@ Generates a random timestamp in ISO 8601 format with millisecond accuracy
 <table><tbody>
 <tr><th>Type:</th><td><code>scope</code></td><tr><th>Root object:</th><td>ErrorOutput</td></tr>
 <tr><th>Properties</th><td><details><summary>error (<code>string</code>)</summary>
-                <table><tbody><tr><th>Name:</th><td>Failure Error</td></tr><tr><th>Description:</th><td>Reason for failure</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
+                <table><tbody><tr><th>Name:</th><td>Failure Error</td></tr><tr><th>Description:</th><td width="500">Reason for failure</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
             </details></td></tr>
 <tr><td colspan="2"><details><summary><strong>Objects</strong></summary><details><summary>ErrorOutput (<code>object</code>)</summary>
             <table><tbody><tr><th>Type:</th><td><code>object</code></td><tr><th>Properties</th><td><details><summary>error (<code>string</code>)</summary>
-        <table><tbody><tr><th>Name:</th><td>Failure Error</td></tr><tr><th>Description:</th><td>Reason for failure</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
+        <table><tbody><tr><th>Name:</th><td>Failure Error</td></tr><tr><th>Description:</th><td width="500">Reason for failure</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
         </details></td></tr>
 </tbody></table>
         </details></details></td></tr>
@@ -71,11 +71,11 @@ Generates a random timestamp in ISO 8601 format with millisecond accuracy
 <table><tbody>
 <tr><th>Type:</th><td><code>scope</code></td><tr><th>Root object:</th><td>SuccessOutputTimestamp</td></tr>
 <tr><th>Properties</th><td><details><summary>timestamp (<code>string</code>)</summary>
-                <table><tbody><tr><th>Name:</th><td>timestamp</td></tr><tr><th>Description:</th><td>An ISO 8601 timestamp with millisecond precision</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
+                <table><tbody><tr><th>Name:</th><td>timestamp</td></tr><tr><th>Description:</th><td width="500">An ISO 8601 timestamp with millisecond precision</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
             </details></td></tr>
 <tr><td colspan="2"><details><summary><strong>Objects</strong></summary><details><summary>SuccessOutputTimestamp (<code>object</code>)</summary>
             <table><tbody><tr><th>Type:</th><td><code>object</code></td><tr><th>Properties</th><td><details><summary>timestamp (<code>string</code>)</summary>
-        <table><tbody><tr><th>Name:</th><td>timestamp</td></tr><tr><th>Description:</th><td>An ISO 8601 timestamp with millisecond precision</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
+        <table><tbody><tr><th>Name:</th><td>timestamp</td></tr><tr><th>Description:</th><td width="500">An ISO 8601 timestamp with millisecond precision</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
         </details></td></tr>
 </tbody></table>
         </details></details></td></tr>
@@ -106,11 +106,11 @@ Generates a random UUID which can be used for tracking uniqueness
 <table><tbody>
 <tr><th>Type:</th><td><code>scope</code></td><tr><th>Root object:</th><td>ErrorOutput</td></tr>
 <tr><th>Properties</th><td><details><summary>error (<code>string</code>)</summary>
-                <table><tbody><tr><th>Name:</th><td>Failure Error</td></tr><tr><th>Description:</th><td>Reason for failure</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
+                <table><tbody><tr><th>Name:</th><td>Failure Error</td></tr><tr><th>Description:</th><td width="500">Reason for failure</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
             </details></td></tr>
 <tr><td colspan="2"><details><summary><strong>Objects</strong></summary><details><summary>ErrorOutput (<code>object</code>)</summary>
             <table><tbody><tr><th>Type:</th><td><code>object</code></td><tr><th>Properties</th><td><details><summary>error (<code>string</code>)</summary>
-        <table><tbody><tr><th>Name:</th><td>Failure Error</td></tr><tr><th>Description:</th><td>Reason for failure</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
+        <table><tbody><tr><th>Name:</th><td>Failure Error</td></tr><tr><th>Description:</th><td width="500">Reason for failure</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
         </details></td></tr>
 </tbody></table>
         </details></details></td></tr>
@@ -121,11 +121,69 @@ Generates a random UUID which can be used for tracking uniqueness
 <table><tbody>
 <tr><th>Type:</th><td><code>scope</code></td><tr><th>Root object:</th><td>SuccessOutputUUID</td></tr>
 <tr><th>Properties</th><td><details><summary>uuid (<code>string</code>)</summary>
-                <table><tbody><tr><th>Name:</th><td>UUID</td></tr><tr><th>Description:</th><td>A randomly generated UUID</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
+                <table><tbody><tr><th>Name:</th><td>UUID</td></tr><tr><th>Description:</th><td width="500">A randomly generated UUID</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
             </details></td></tr>
 <tr><td colspan="2"><details><summary><strong>Objects</strong></summary><details><summary>SuccessOutputUUID (<code>object</code>)</summary>
             <table><tbody><tr><th>Type:</th><td><code>object</code></td><tr><th>Properties</th><td><details><summary>uuid (<code>string</code>)</summary>
-        <table><tbody><tr><th>Name:</th><td>UUID</td></tr><tr><th>Description:</th><td>A randomly generated UUID</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
+        <table><tbody><tr><th>Name:</th><td>UUID</td></tr><tr><th>Description:</th><td width="500">A randomly generated UUID</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
+        </details></td></tr>
+</tbody></table>
+        </details></details></td></tr>
+</tbody></table>
+
+
+
+## Wait (`wait`)
+
+Wait for specified milliseconds
+
+### Input
+
+<table><tbody>
+<tr><th>Type:</th><td><code>scope</code></td><tr><th>Root object:</th><td>WaitInput</td></tr>
+<tr><th>Properties</th><td><details><summary>wait_time_ms (<code>int</code>)</summary>
+                <table><tbody><tr><th>Name:</th><td>Wait time</td></tr><tr><th>Description:</th><td width="500">How long to wait in milliseconds</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>int</code></td>
+</tbody></table>
+            </details></td></tr>
+<tr><td colspan="2"><details><summary><strong>Objects</strong></summary><details><summary>WaitInput (<code>object</code>)</summary>
+            <table><tbody><tr><th>Type:</th><td><code>object</code></td><tr><th>Properties</th><td><details><summary>wait_time_ms (<code>int</code>)</summary>
+        <table><tbody><tr><th>Name:</th><td>Wait time</td></tr><tr><th>Description:</th><td width="500">How long to wait in milliseconds</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>int</code></td>
+</tbody></table>
+        </details></td></tr>
+</tbody></table>
+        </details></details></td></tr>
+</tbody></table>
+
+### Outputs
+
+
+#### error
+
+<table><tbody>
+<tr><th>Type:</th><td><code>scope</code></td><tr><th>Root object:</th><td>ErrorOutput</td></tr>
+<tr><th>Properties</th><td><details><summary>error (<code>string</code>)</summary>
+                <table><tbody><tr><th>Name:</th><td>Failure Error</td></tr><tr><th>Description:</th><td width="500">Reason for failure</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
+            </details></td></tr>
+<tr><td colspan="2"><details><summary><strong>Objects</strong></summary><details><summary>ErrorOutput (<code>object</code>)</summary>
+            <table><tbody><tr><th>Type:</th><td><code>object</code></td><tr><th>Properties</th><td><details><summary>error (<code>string</code>)</summary>
+        <table><tbody><tr><th>Name:</th><td>Failure Error</td></tr><tr><th>Description:</th><td width="500">Reason for failure</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>string</code></td></tbody></table>
+        </details></td></tr>
+</tbody></table>
+        </details></details></td></tr>
+</tbody></table>
+
+#### success
+
+<table><tbody>
+<tr><th>Type:</th><td><code>scope</code></td><tr><th>Root object:</th><td>SuccessOutputWait</td></tr>
+<tr><th>Properties</th><td><details><summary>waited_ms (<code>float</code>)</summary>
+                <table><tbody><tr><th>Name:</th><td>waited</td></tr><tr><th>Description:</th><td width="500">Confirmation of milliseconds waited</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>float</code></td>
+</tbody></table>
+            </details></td></tr>
+<tr><td colspan="2"><details><summary><strong>Objects</strong></summary><details><summary>SuccessOutputWait (<code>object</code>)</summary>
+            <table><tbody><tr><th>Type:</th><td><code>object</code></td><tr><th>Properties</th><td><details><summary>waited_ms (<code>float</code>)</summary>
+        <table><tbody><tr><th>Name:</th><td>waited</td></tr><tr><th>Description:</th><td width="500">Confirmation of milliseconds waited</td></tr><tr><th>Required:</th><td>Yes</td></tr><tr><th>Type:</th><td><code>float</code></td>
+</tbody></table>
         </details></td></tr>
 </tbody></table>
         </details></details></td></tr>
