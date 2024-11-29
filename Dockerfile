@@ -40,7 +40,7 @@ RUN python -m pip install -r requirements.txt
 
 WORKDIR /app/${package}
 
-ENTRYPOINT ["python", "utilities_plugin.py"]
+ENTRYPOINT ["python", "arcaflow_plugin_utilities.py"]
 CMD []
 LABEL org.opencontainers.image.source="https://github.com/arcalot/arcaflow-plugin-utilities"
 LABEL org.opencontainers.image.licenses="Apache-2.0+GPL-2.0-only"
