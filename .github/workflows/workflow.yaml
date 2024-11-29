@@ -25,4 +25,4 @@ jobs:
       contents: write
       pull-requests: write
     with:
-      plugin_path: "arcaflow_plugin_utilities/utilities_plugin.py"
+      plugin_path: "arcaflow_plugin_utilities/arcaflow_plugin_utilities.py"

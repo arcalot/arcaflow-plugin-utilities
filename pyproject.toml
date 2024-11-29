@@ -7,7 +7,7 @@ license = "Apache-2.0+GPL-2.0-only"
 readme = "README.md"
 
 packages = [
-   { include="utilities_plugin.py", from="./arcaflow_plugin_utilities"  },
+   { include="arcaflow_plugin_utilities.py", from="./arcaflow_plugin_utilities"  },
 ]
 
 [tool.poetry.dependencies]

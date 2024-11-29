@@ -1,11 +1,11 @@
 # Utilities Plugin for Arcaflow
 
 The Utilities plugin is used to store common utility functions used by various plugins/workflows.
-Where each step of the plugin corresponds to a different utility functionality. Refer to individual step functions in utilities_plugin.py to see what input is expected for each step.
+Where each step of the plugin corresponds to a different utility functionality. Refer to individual step functions in `arcaflow_plugin_utilities.py` to see what input is expected for each step.
 
 ## To test:
 
-In order to run the [utilities plugin](utilities_plugin.py) run the following steps:
+In order to run the [utilities plugin](arcaflow_plugin_utilities.py) run the following steps:
 
 ### Containerized
 1. Clone this repository
@@ -20,7 +20,7 @@ In order to run the [utilities plugin](utilities_plugin.py) run the following st
 3. Activate the `venv` by running `source venv/bin/activate`
 4. Run `pip install poetry`
 5. Run `poetry install`
-6. Run `./utilities_plugin.py -f example.yaml ` to run the plugin
+6. Run `arcaflow_plugin_utilities/arcaflow_plugin_utilities.py -f example.yaml ` to run the plugin
 
 
 ## Image Building
