@@ -12,10 +12,14 @@ class HelloWorldTest(unittest.TestCase):
         )
 
         plugin.test_object_serialization(
-            arcaflow_plugin_utilities.SuccessOutputTimestamp("2023-11-20T18:34:59.784498Z")
+            arcaflow_plugin_utilities.SuccessOutputTimestamp(
+                "2023-11-20T18:34:59.784498Z"
+            )
         )
 
-        plugin.test_object_serialization(arcaflow_plugin_utilities.SuccessOutputWait(1.234))
+        plugin.test_object_serialization(
+            arcaflow_plugin_utilities.SuccessOutputWait(1.234)
+        )
 
         plugin.test_object_serialization(
             arcaflow_plugin_utilities.ErrorOutput(error="This is an error")
