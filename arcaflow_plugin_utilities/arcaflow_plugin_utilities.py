@@ -2,6 +2,8 @@
 
 import sys
 import uuid
+import psutil
+import os
 from datetime import datetime, timezone
 from time import time, sleep
 import typing
@@ -47,6 +49,24 @@ class SuccessOutputWait:
         float,
         schema.name("waited"),
         schema.description("Confirmation of milliseconds waited"),
+    ]
+
+
+@dataclass
+class SuccessOutputNumCpu:
+    num_cpu: typing.Annotated[
+        int,
+        schema.name("num cpu"),
+        schema.description("Number of logical CPUs"),
+    ]
+
+
+@dataclass
+class SuccessOutputAvailableMemory:
+    available_memory: typing.Annotated[
+        int,
+        schema.name("available memory"),
+        schema.description("Amount of available memory (in bytes)"),
     ]
 
 
@@ -102,6 +122,33 @@ def wait(
     return "success", SuccessOutputWait((end - start) * 1000)
 
 
+@plugin.step(
+    id="num_cpu",
+    name="Num Cpu",
+    description=("Number of logical CPUs"),
+    outputs={"success": SuccessOutputNumCpu, "error": ErrorOutput},
+)
+def num_cpu(
+    params: InputParams,
+) -> typing.Tuple[str, typing.Union[SuccessOutputNumCpu, ErrorOutput]]:
+    cpu_count = os.cpu_count()
+    if cpu_count is None:
+        return "error", ErrorOutput("Number of logical CPUs in the system couldn't be determined")
+    return "success", SuccessOutputNumCpu(cpu_count)
+
+
+@plugin.step(
+    id="available_memory",
+    name="Available Memory",
+    description=("Amount of available memory (in bytes)"),
+    outputs={"success": SuccessOutputAvailableMemory},
+)
+def available_memory(
+    params: InputParams,
+) -> typing.Tuple[str, SuccessOutputAvailableMemory]:
+    return "success", SuccessOutputAvailableMemory(psutil.virtual_memory().available)
+
+
 if __name__ == "__main__":
     sys.exit(
         plugin.run(
@@ -109,6 +156,8 @@ if __name__ == "__main__":
                 generate_uuid,
                 generate_timestamp,
                 wait,
+                num_cpu,
+                available_memory,
             )
         )
     )
