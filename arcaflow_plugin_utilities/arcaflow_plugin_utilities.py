@@ -65,6 +65,7 @@ class SuccessOutputNumCpu:
 class SuccessOutputAvailableMemory:
     available_memory: typing.Annotated[
         int,
+        schema.units(schema.UNIT_BYTE),
         schema.name("available memory"),
         schema.description("Amount of available memory (in bytes)"),
     ]
